@@ -3,72 +3,72 @@
 <head>
 	<title></title>
 </head>
-<body>
+<body class="page2">
 <form method="post" action="pizza_menu" class="center">
-	<h4>Please select the size of pizza you would like:</h4>
-	<img src="/img/size.png" width="30" height="30"><input type="radio" name="size" value="small">Small: $7.00<br>
-	<img src="/img/size.png" width="40" height="40"><input type="radio" name="size" value="medium">Medium: $9.50<br>
-	<img src="/img/size.png" width="50" height="50"><input type="radio" name="size" value="large">Large: $12.00<br>
+	<p class="page1"><h4>Please select the size of pizza you would like:</h4>
+	<input type="radio" name="size" value="Small">Small: $7.00<br>
+	<input type="radio" name="size" value="Medium">Medium: $9.50<br>
+	<input type="radio" name="size" value="Large">Large: $12.00<br></p>
 
 	<h4>Please select a crust:</h4>
-	<input type="radio" name="crust" value="flatbread">Flatbread<br>
-	<input type="radio" name="crust" value="deep dish">Deep Dish<br>
+	<input type="radio" name="crust" value="Flatbread">Flatbread<br>
+	<input type="radio" name="crust" value="Deep dish">Deep Dish<br>
 	<input type="radio" name="crust" value="Focaccia">Focaccia<br>
-	<input type="radio" name="crust" value="thin">Thin<br>
-	<input type="radio" name="crust" value="stuffed">Stuffed(cheese)<br>
+	<input type="radio" name="crust" value="Thin">Thin<br>
+	<input type="radio" name="crust" value="Stuffed">Stuffed(cheese)<br>
 
 	<h4>Please select the type of sauce:</h4>
-	<input type="radio" name="sauce" value="marinara">Marinara<br>
-	<input type="radio" name="sauce" value="pesto">Pesto<br>
-	<input type="radio" name="sauce" value="olive oil">Olive Oil<br>
-	<input type="radio" name="sauce" value="hummus">Hummus<br>
-	<input type="radio" name="sauce" value="none">No sauce<br>
+	<input type="radio" name="sauce" value="Marinara">Marinara<br>
+	<input type="radio" name="sauce" value="Pesto">Pesto<br>
+	<input type="radio" name="sauce" value="Olive Oil">Olive Oil<br>
+	<input type="radio" name="sauce" value="Hummus">Hummus<br>
+	<input type="radio" name="sauce" value="No Sauce">No sauce<br>
 
 	<h4>Please select the type of meat you would like:</h4>
-	<input type="checkbox" name="meats[]" value="sausage">Sausage<br>
-	<input type="checkbox" name="meats[]" value="pepperoni">Pepperoni<br>
-	<input type="checkbox" name="meats[]" value="ham">Ham<br>
-	<input type="checkbox" name="meats[]" value="bacon">Bacon<br>
-	<input type="checkbox" name="meats[]" value="none">No meat<br>
+	<input type="checkbox" name="meats[]" value="Sausage">Sausage<br>
+	<input type="checkbox" name="meats[]" value="Pepperoni">Pepperoni<br>
+	<input type="checkbox" name="meats[]" value="Ham">Ham<br>
+	<input type="checkbox" name="meats[]" value="Bacon">Bacon<br>
+	<input type="checkbox" name="meats[]" value="No Meat">No meat<br>
 
 	<h4>Please select the type of vegetables:</h4>
-	<input type="checkbox" name="veggies[]" value="bell peppers">Bell Peppers<br>
-	<input type="checkbox" name="veggies[]" value="banana peppers">Banana Peppers<br>
-	<input type="checkbox" name="veggies[]" value="onion">Onions<br>
-	<input type="checkbox" name="veggies[]" value="spinach">Spinach<br>
-	<input type="checkbox" name="veggies[]" value="none">No vegetables<br>
+	<input type="checkbox" name="veggies[]" value="Bell Peppers">Bell Peppers<br>
+	<input type="checkbox" name="veggies[]" value="Banana Peppers">Banana Peppers<br>
+	<input type="checkbox" name="veggies[]" value="Onion">Onions<br>
+	<input type="checkbox" name="veggies[]" value="Spinach">Spinach<br>
+	<input type="checkbox" name="veggies[]" value="No Vegetables">No Vegetables<br>
 
 	<h4>Please select any extra toppings:</h4>
-	<input type="checkbox" name="special_topping[]" value="pineapple">Pineapple<br>
-	<input type="checkbox" name="special_topping[]" value="carrot">Carrot<br>
-	<input type="checkbox" name="special_topping[]" value="olives">Olives<br>
-	<input type="checkbox" name="special_topping[]" value="plantains">Plantains<br>
-	<input type="checkbox" name="special_topping[]" value="frog legs">Frog Legs<br>
-	<input type="checkbox" name="extra[]" value="cheese">Cheese<br>
-	<input type="checkbox" name="extra[]" value="pepperoni">Pepperoni<br>
-	<input type="checkbox" name="extra[]" value="bell peppers">Bell Peppers<br>
-	<input type="checkbox" name="extra[]" value="sausage">Sausage<br>
-	<input type="checkbox" name="extra[]" value="none">No extra toppings<br>
+	<input type="checkbox" name="special_topping[]" value="Pineapple">Pineapple<br>
+	<input type="checkbox" name="special_topping[]" value="Carrot">Carrot<br>
+	<input type="checkbox" name="special_topping[]" value="Olives">Olives<br>
+	<input type="checkbox" name="special_topping[]" value="Plantains">Plantains<br>
+	<input type="checkbox" name="special_topping[]" value="Frog Legs">Frog Legs<br>
+	<input type="checkbox" name="extra[]" value="Cheese">Cheese<br>
+	<input type="checkbox" name="extra[]" value="Pepperoni">Pepperoni<br>
+	<input type="checkbox" name="extra[]" value="Bell Peppers">Bell Peppers<br>
+	<input type="checkbox" name="extra[]" value="Sausage">Sausage<br>
+	<input type="checkbox" name="extra[]" value="No Extra Toppings">No Extra Toppings<br>
 
 	<h4>Salads:</h4>
-	<input type="checkbox" name="salad_type[]" value="caesar">Caesar<br>
-	<input type="checkbox" name="salad_type[]" value="cobb">Cobb<br>
-	<input type="checkbox" name="salad_type[]" value="the house">The House<br>
-	<input type="checkbox" name="salad_type[]" value="frog leg">Frog Leg<br>
-	<input type="checkbox" name="salad_type[]" value="chicken">Chicken<br>
-	<input type="checkbox" name="salad_type[]" value="none">No Salad<br>
+	<input type="checkbox" name="salad_type[]" value="Caesar">Caesar<br>
+	<input type="checkbox" name="salad_type[]" value="Cobb">Cobb<br>
+	<input type="checkbox" name="salad_type[]" value="The House">The House<br>
+	<input type="checkbox" name="salad_type[]" value="Frog Leg">Frog Leg<br>
+	<input type="checkbox" name="salad_type[]" value="Chicken">Chicken<br>
+	<input type="checkbox" name="salad_type[]" value="No Salad">No Salad<br>
 
 	<h4>Pasta:</h4>
-	<input type="checkbox" name="pasta_type[]" value="rigatoni">Rigatoni<br>
-	<input type="checkbox" name="pasta_type[]" value="tortellini">Tortellini<br>
-	<input type="checkbox" name="pasta_type[]" value="fettuccine">Fettuccine<br>
-	<input type="checkbox" name="pasta_type[]" value="none">No Pasta<br>
+	<input type="checkbox" name="pasta_type[]" value="Rigatoni">Rigatoni<br>
+	<input type="checkbox" name="pasta_type[]" value="Tortellini">Tortellini<br>
+	<input type="checkbox" name="pasta_type[]" value="Fettuccine">Fettuccine<br>
+	<input type="checkbox" name="pasta_type[]" value="No Pasta">No Pasta<br>
 
 	<h4>Beverages:</h4>
-	<input type="checkbox" name="drink_choice[]" value="sprite">Sprite<br>
-	<input type="checkbox" name="drink_choice[]" value="lemonade">Lemonade<br>
-	<input type="checkbox" name="drink_choice[]" value="coke">Coke<br>
-	<input type="checkbox" name="drink_choice[]" value="none">No Drink<br>
+	<input type="checkbox" name="drink_choice[]" value="Sprite">Sprite<br>
+	<input type="checkbox" name="drink_choice[]" value="Lemonade">Lemonade<br>
+	<input type="checkbox" name="drink_choice[]" value="Coke">Coke<br>
+	<input type="checkbox" name="drink_choice[]" value="No Drink">No Drink<br>
 
 	<h5>Select "More" to add another pizza or "Next" to proceed</h5>
 	More:<input type="radio" name="choice" value="More"><br>

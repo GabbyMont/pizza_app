@@ -43,13 +43,13 @@ post '/pizza_menu' do
 
 	if session[:choice] == "More"
 		pizza_cost = cost(session[:size])
-		session[:total_cost] += pizza_cost
+		session[:total_cost] += pizza_cost.to_i
 
 		session[:pizza_input] << [session[:size], session[:crust], session[:sauce], session[:meats], session[:veggies], session[:special_topping], session[:extra], session[:salad_type], session[:pasta_type], session[:drink_choice]]
 		redirect '/menu'
 	else session[:choice] == "Next"
 		pizza_cost = cost(session[:size])
-		session[:total_cost] += pizza_cost
+		session[:total_cost] += pizza_cost.to_i
 
 		session[:pizza_input] << [session[:size], session[:crust], session[:sauce], session[:meats], session[:veggies], session[:special_topping], session[:extra], session[:salad_type], session[:pasta_type], session[:drink_choice]]
 		redirect '/delivery'
@@ -82,4 +82,8 @@ end
 
 post '/reset' do
 	redirect '/'
+end
+
+get '/contact' do
+	erb :contact
 end

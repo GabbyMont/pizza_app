@@ -15,21 +15,61 @@ li a {
     color: white;
     padding: 25px;
     text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 10s;
 
+}
+
+@keyframes example {
+    from {background-color: green;}
+    to {background-color: red;}
 }
 
 li a:hover {
 	background-color: blue;
 }
+/*
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}*/
+
+/*li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}*/
 
 .center {
 	text-align: center;
 }
 
-/*body {
-	background-image: url("/../../img/pizzasign.png") no-repeat center;
-
-}*/
+p.head {
+    border: 6px #ff3333;
+    border-radius: 9px;
+    border-style: dotted;
+    height: 2rem;
+    font-size: 2rem;
+    font-style: italic;
+    color: seagreen
+}
 
 a:link {
     color: blue;
@@ -58,10 +98,22 @@ a:active {
 }
 
 .page1 {
-	background-image: url(/img/pizzeriafront.jpg);
+	background-image: url(/img/delivery.gif);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 30%;
+	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
+}
+
+.page2 {
+	background-image: url(/img/pizzeriainside.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	text-shadow: 2px 2px 8px #ffffff;
+	font-size: 150%
+
 }
