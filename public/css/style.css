@@ -1,0 +1,67 @@
+li {
+	display: inline;
+	font-size: 1rem;
+	padding-right: 2rem;
+	text-align: left;
+}
+
+ul {
+	text-align: right;
+}
+
+li a {
+	color: #0059b3;
+	background-color: green;
+    color: white;
+    padding: 25px;
+    text-align: center;
+
+}
+
+li a:hover {
+	background-color: blue;
+}
+
+.center {
+	text-align: center;
+}
+
+/*body {
+	background-image: url("/../../img/pizzasign.png") no-repeat center;
+
+}*/
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+
+a:hover {
+    color: red;
+    font-size: 150%
+}
+
+a:active {
+    color: yellow;
+}
+
+
+.h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #4CAF50;
+    font-style: oblique;
+}
+
+.page1 {
+	background-image: url(/img/pizzeriafront.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 30%;
+	background-attachment: fixed;
+	background-position: center;
+}
