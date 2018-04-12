@@ -19,12 +19,12 @@ li a {
     height: 100px;
     background-color: red;
     animation-name: example;
-    animation-duration: 10s;
+    animation-duration: 6s;
 
 }
 
 @keyframes example {
-    from {background-color: green;}
+    from {background-color: #00ffcc;}
     to {background-color: red;}
 }
 
@@ -85,11 +85,6 @@ a:hover {
     font-size: 150%
 }
 
-a:active {
-    color: yellow;
-}
-
-
 .h1 {
     text-align: center;
     text-transform: uppercase;
@@ -118,6 +113,48 @@ a:active {
 
 }
 
+.page3 {
+    background-image: url(/img/catpizza.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.page4 {
+    background-image: url(/img/pizzadone.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+.about {
+    background-color: #99cc00
+}
+
+.contact {
+     background-color: #99cc00
+}
+
 .padding {
-    padding: 70px;
+    padding: 40px;
+}
+
+.shadow4 {
+    text-shadow: 1px 1px 2px #0099ff, 0 0 1em #66ff99, 0 0 0.2em white;
+    text-decoration: underline overline #80dfff;
+    text-decoration: #00ffff wavy underline;
+}
+
+.shadow2 {
+    text-shadow: #FC0 1px 0 10px;
+}
+
+.underline {
+       text-decoration: #00ffff wavy underline;
+
 }

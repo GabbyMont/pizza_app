@@ -3,8 +3,8 @@
 <head>
 	<title></title>
 </head>
-<body>
-	<h3>Alright, so you ordered <%=session[:pizza_input].length%> pizza(s), your total cost is <%=session[:total_cost]%></h3>
+<body class="center">
+	<h3 class="padding">Alright, so you ordered <%=session[:pizza_input].length%> pizza(s), your total cost is <%=session[:total_cost]%></h3>
 	<%session[:pizza_input].each do |pizzas|%>
 		<%=pizzas.join(',')%><br>
 	<%end%>
