@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<body>
+		<form method="post" action="confirm" class="center padding">
+			<% if session[:meats] != nil %>
+				<% session[:meats].each do |meats|%>
+					<%=meats%>
+					<input type="checkbox" name="meats[]" value="<%=meats%>">Yes
+					<input type="checkbox" name="no_meats[]" value="">No<br>
+				<% end %>
+			<% end %>
+
+			<% if session[:veggies] != nil %>
+				<% session[:veggies].each do |veggies| %>
+				<%=veggies%>
+				<input type="checkbox" name="veggies[]" value="<%=veggies%>">Yes
+				<input type="checkbox" name="no_veggies[]" value="">No<br>
+				<% end %>
+			<% end %>
+
+			<% if session[:special_topping] != nil %>
+				<% session[:special_topping].each do |topping| %>
+					<%=topping%>
+					<input type="checkbox" name="special_topping[]" value="<%=topping%>">Yes
+					<input type="checkbox" name="no_topping[]" value="">No<br>
+				<% end %>
+			<% end %>
+
+			<% if session[:salad_type] != nil %>
+				<% session[:salad_type].each do |salad| %>
+					<%=salad%>
+					<input type="checkbox" name="salad_type[]" value="<%=salad%>">Yes
+					<input type="checkbox" name="no_salad[]" value="">No<br>
+				<% end %>
+			<% end %>
+
+			<% if session[:pasta_type] != nil %>
+				<% session[:pasta_type].each do |pasta| %>
+					<%=pasta%>
+					<input type="checkbox" name="pasta_type[]" value="<%=pasta%>">Yes
+					<input type="checkbox" name="no_pasta[]" value="">No<br>
+				<% end %>
+			<% end %>
+
+			<% if session[:drink_choice] != nil %>
+				<% session[:drink_choice].each do |drink| %>
+					<%=drink%>
+					<input type="checkbox" name="drink_choice[]" value="<%=drink%>">Yes
+					<input type="checkbox" name="no_drink[]" value="">No<br>
+				<% end %>
+			<% end %>
+
+			<h5>Select "More" to add another pizza or "Next" to proceed</h5>
+			More:<input type="radio" name="confirm" value="More"><br>
+			Next:<input type="radio" name="confirm" value="Next"><br>
+			<input type="submit" value="Enter">
+		</form>
+	</body>
+</html>

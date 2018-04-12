@@ -20,7 +20,6 @@ get '/menu' do
 	session[:meats] = ""
 	session[:veggies] = ""
 	session[:special_topping] = ""
-	session[:extra] = ""
 	session[:salad_type] = ""
 	session[:pasta_type] = ""
 	session[:drink_choice] = ""
@@ -35,23 +34,34 @@ post '/pizza_menu' do
 	session[:meats] = params[:meats] 
 	session[:veggies] = params[:veggies]
 	session[:special_topping] = params[:special_topping]
-	session[:extra] = params[:extra]
 	session[:salad_type] = params[:salad_type]
 	session[:pasta_type] = params[:pasta_type]
 	session[:drink_choice] = params[:drink_choice]
-	session[:choice] = params[:choice]
+	redirect '/confirmation'
+end
 
+get '/confirmation' do
+	erb :confirmation
+end
+
+post '/confirm' do
+	session[:meats] = params[:meats] || [] # If nothing chosen then session[:meats] becomes an empty array
+	session[:veggies] = params[:veggies] || []
+	session[:special_topping] = params[:special_topping] || []
+	session[:salad_type] = params[:salad_type] || []
+	session[:pasta_type] = params[:pasta_type] || []
+	session[:drink_choice] = params[:drink_choice] || []
+	session[:choice] = params[:confirm]
 	if session[:choice] == "More"
 		pizza_cost = cost(session[:size])
 		session[:total_cost] += pizza_cost.to_i
-
-		session[:pizza_input] << [session[:size], session[:crust], session[:sauce], session[:meats], session[:veggies], session[:special_topping], session[:extra], session[:salad_type], session[:pasta_type], session[:drink_choice]]
+		session[:pizza_input] << [session[:size], session[:crust], session[:sauce], session[:meats], session[:veggies], session[:special_topping], session[:salad_type], session[:pasta_type], session[:drink_choice]]
 		redirect '/menu'
 	else session[:choice] == "Next"
 		pizza_cost = cost(session[:size])
 		session[:total_cost] += pizza_cost.to_i
 
-		session[:pizza_input] << [session[:size], session[:crust], session[:sauce], session[:meats], session[:veggies], session[:special_topping], session[:extra], session[:salad_type], session[:pasta_type], session[:drink_choice]]
+		session[:pizza_input] << [session[:size], session[:crust], session[:sauce], session[:meats], session[:veggies], session[:special_topping], session[:salad_type], session[:pasta_type], session[:drink_choice]]
 		redirect '/delivery'
 	end
 end
@@ -63,7 +73,7 @@ end
 post '/delivery_input' do
 	address = params[:address]
 	delivery_name = params[:name]
-	session[:total_cost] += 5.00
+	session[:total_cost] += 5.00 # Adds five dollars to total cost for delivery
 	session[:address] = "#{address} is the address of delivery."
 	session[:name] = "#{delivery_name} is the name of the order."
 	redirect '/final'
@@ -77,6 +87,7 @@ post '/no_delivery' do
 end
 
 get '/final' do
+	session[:total_cost] += session[:pizza_input].length * 0.09
 	erb :final_page
 end
 

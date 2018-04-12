@@ -9,11 +9,11 @@ def wings_price(amount)
 end
 
 def cost(size)
-	if size == "small"
+	if size == "Small"
 		7.00
-	elsif size == "medium"
+	elsif size == "Medium"
 		9.50
-	elsif size == "large"
+	elsif size == "Large"
 		12.00
 	end
 end
